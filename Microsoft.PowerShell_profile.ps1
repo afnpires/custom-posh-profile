@@ -62,8 +62,12 @@ $GitPromptSettings.AfterText = ''
 $GitPromptSettings.BeforeForegroundColor = $GitPromptSettings.AfterForegroundColor = [ConsoleColor]::Gray
 $GitPromptSettings.BranchIdenticalStatusToForegroundColor = [ConsoleColor]::DarkGreen
 
-    # ------------ Chocolatey profile
+# ------------ Chocolatey profile
 $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 if (Test-Path($ChocolateyProfile)) {
     Import-Module "$ChocolateyProfile"
 }
+
+# Alias
+Set-Alias c code -Scope Global
+Set-Alias t typora -scope Global
