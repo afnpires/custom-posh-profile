@@ -41,6 +41,10 @@ function global:prompt {
 
     Write-Host $curPath -NoNewLine -ForegroundColor "DarkBlue"
 
+    if ($GitStatus) {
+        Write-Host ""$(git config user.email) -NoNewLine -ForegroundColor DarkYellow
+    }
+
     Write-VcsStatus
 
     $global:LASTEXITCODE = $realLASTEXITCODE
