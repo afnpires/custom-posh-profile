@@ -70,4 +70,5 @@ if (Test-Path($ChocolateyProfile)) {
 
 # Alias
 Set-Alias c code -Scope Global
+Set-Alias e explorer -Scope Global
 Set-Alias t typora -scope Global
