@@ -62,11 +62,7 @@ $GitPromptSettings.AfterText = ''
 $GitPromptSettings.BeforeForegroundColor = $GitPromptSettings.AfterForegroundColor = [ConsoleColor]::Gray
 $GitPromptSettings.BranchIdenticalStatusToForegroundColor = [ConsoleColor]::DarkGreen
 
-# --- alias
-New-Alias d docker
-New-Alias dc docker-compose
-
-# ------------ Chocolatey profile
+    # ------------ Chocolatey profile
 $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 if (Test-Path($ChocolateyProfile)) {
     Import-Module "$ChocolateyProfile"
