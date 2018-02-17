@@ -10,6 +10,9 @@ Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
 Set-PSReadlineKeyHandler -Chord 'Shift+Tab' -Function Complete
 Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 
+Import-Module cd-extras -DisableNameChecking
+Set-CdExtrasOption -Option AUTO_CD -Value $true
+Set-CdExtrasOption -Option NOARG_CD -Value 'c:/'
 Import-Module Get-ChildItemColor
 
 Set-Alias ls Get-ChildItemColor -option AllScope
